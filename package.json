@@ -5,13 +5,17 @@
   "author": "Simon Lydell",
   "main": "scripts/repl.js",
   "scripts": {
-    "test": "mocha --ui tdd scripts/test-layout.js"
+    "test": "mocha --ui tdd scripts/test-layout.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "text-frequencies-analysis": "^2.0.0",
-    "wikipedia-gather": "lydell/wikipedia-gather"
+    "wikipedia-gather": "lydell/wikipedia-gather",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "mocha": "^2.2.5"
-  }
+  },
+  "snyk": true
 }
